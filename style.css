@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "futura md bt";
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background:#F5FFF5;
+}
+/* Nav Bar*/
+.logo{
+    font-size: 28.015px;
+    font-weight: 700;
+}
+.logo img{
+    padding-top:10px ;
+    width: 5%;
+}
+.logo span{
+    padding-bottom: 30px;
+}
+header {
+    margin-top: 40px;
+    background: #FFFFFF;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    border-radius: 48px;
+    background: #FFF;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    
+}
+.nav_items{
+    align-items: center;
+    font-size: 25.02px;
+    font-style: normal;
+font-weight: 600;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #000;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #2563EB;
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+}
+/* Main page*/
+.image_container {
+    margin: auto; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    max-width: 95%; 
+    position: relative;
+    z-index: 1;
+}
+.image_container img{
+    width: 100%;
+    border-radius: 0px 0px 32px 32px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.36) 11.72%, rgba(0, 0, 0, 0.00) 82.93%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+    background-blend-mode: normal, normal, darken;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.36) inset, 0px 8px 8px 0px rgba(0, 0, 0, 0.36);
+   align-items: center;
+   height: 521px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.overlay-text {
+    font-family: 'TypoGraphica';
+    position: absolute;
+    top: 30%; /* Adjust vertical position to center the text */
+    left: 50%; /* Adjust horizontal position to center the text */
+    transform: translate(-50%, -50%); /* Center the text both vertically and horizontally */
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 70px; /* Set font size to 70px */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflow text */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.958px;
+    font-weight: bolder;
+    animation: transformText 8s infinite;
+    z-index: 1;
+}
+.overlay-text2 {
+    position: absolute;
+    top: 45%; /* Adjust as needed */
+    left: 20%;
+    color: #FFF;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.148px;
+    font-size: 28.709px;
+    font-family: 'Poppins';
+    z-index: 1;
+}
+.email-box {
+    position: absolute;
+    top: 65%; /* Adjust as needed */
+    left: 40%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 650px;
+    height: 50px;
+    padding: 17px 16px 17px 20px;
+    align-items: center;
+    gap: 13px;
+    align-self: stretch;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.62);
+    background-color: rgba(255, 255, 255, 0.5); /* Background color for the email box */
+    backdrop-filter: blur(60px);
+    z-index: 1;
+}
+
+.email-box input {
+    width: calc(100% - 80px); /* Adjust width as needed */
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: transparent; /* Set background color of input to transparent */
+}
+
+.email-box input:hover{
+    border: none;
+}
+.email-box input::placeholder {
+    color: #FFF;
+}
+.email-box input::placeholder:hover {
+    border: none;
+}
+.subscribe-btn {
+    width: 20%;
+    height: 50px;
+    font-family: 'poppins';
+    top: 69%;
+    left: 75%;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    border: 1px solid rgba(37, 99, 235, 0.62);
+    background-color: #1c4fc9;
+    box-shadow: 0px 0px 8px 0px #2563EB;
+    backdrop-filter: blur(60px);
+    z-index: 1;
+}
+.subscribe-btn ::placeholder{
+    color: var(--base-white, #FFF);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; /* 162.5% */
+}
+.subscribe-btn:hover {
+    background: rgba(37, 99, 235, 0.48);
+}
+.subscribe-btn i{
+    padding-left:10px ;
+    color: #FFF;
+}
+.overlay-text {
+    /* Your existing styles for overlay-text */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: changeText 1s infinite;
+}
+
+@keyframes transformText {
+    0%, 10% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        content: 'MODERINIZE Your Retail Experience';
+    }
+    25%, 35% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        content: 'REINVENT Your Retail Experience';
+    }
+    50%, 60% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        content: 'ENHANCE Your Retail Experience';
+    }
+    75%, 85% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        content: 'TRANSFORM Your Retail Experience';
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        content: 'MODERINIZE Your Retail Experience';
+    }
+}
+/* Default styles */
+
+/* Your existing styles */
+
+
+
+/* Add more media queries as needed */
+header {
+    position: relative;
+    z-index: 2; /* Ensure it appears above other elements */
+}
+@media only screen and (max-width: 700px) {
+    .body{
+        width: 100%;
+    }
+    .image_container {
+        max-width: 95%; /* Adjust max-width for even smaller screens */
+    }
+    .overlay-text{
+        font-size: 30px;
+        letter-spacing: 0;
+    }
+    .overlay-text2{
+        font-size: 20px;
+        left:0%;
+        letter-spacing: 0;
+    }
+    .email-box{
+        top:80%;
+        width: 60%;
+    }
+    .subscribe-btn{
+        padding: 0%;
+        width: 28%;
+        margin-top: 1%;
+        left: 85%;
+    }
+}
+@media only screen and (max-width: 900px) {
+
+    .image_container {
+        max-width: 95%; /* Adjust max-width for even smaller screens */
+    }
+    .overlay-text{
+        font-size: 50px;
+        letter-spacing: 1.3px;
+    }
+    .overlay-text2{
+        font-size: 30px;
+        left:0%;
+        letter-spacing: 0.5px;
+    }
+    .email-box{
+        width: 60%;
+        top: 72%;
+    }
+    .subscribe-btn{
+        top: 75%;
+        padding: 0%;
+        width: 28%;
+        margin-top: 1%;
+        left: 85%;
+    }
+}
+@media only screen and (max-width: 376px) {
+    .image_container {
+        max-width: 95%; /* Adjust max-width for even smaller screens */
+    }
+    .overlay-text{
+        font-size: 25px;
+        letter-spacing: 0;
+    }
+    .overlay-text2{
+        font-size: 20px;
+        left:0%;
+        letter-spacing: 0;
+    }
+    .email-box{
+        top:80%;
+        width: 60%;
+    }
+    .subscribe-btn{
+        padding: 0%;
+        width: 28%;
+        margin-top: 1%;
+        left: 85%;
+    }
+}
+.buttons{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+   padding-top:50px ;
+   padding: 32px;
+}
+   
+.download {
+    margin-right: 30px;
+    width: 286px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    border: 1px solid rgba(37, 99, 235, 0.00);
+    background: #B8FF00;
+    box-shadow: 0px 0px 8px 0px #B8FF00;
+    backdrop-filter: blur(60px);
+    font-size: 28.709px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.148px;
+    font-family: 'TypoGraphica';
+    text-align: center;
+}
+
+.shop {
+    color: #FFF;
+    width: 286px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    border: 1px solid rgba(37, 99, 235, 0.00);
+    background: #000;
+    box-shadow: 0px 0px 8px 0px #000;
+    backdrop-filter: blur(60px);
+    font-size: 28.709px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.148px;
+    font-family: 'TypoGraphica';
+    text-align: center;
+}
+
+/*services*/
+.Trusties {
+    font-size: 64.008px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: 'Poppins';
+    padding-top: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.slider {
+    height: 250px;
+    margin-left: 5%;
+    position: relative;
+    width: 90%;
+    display: flex;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 10s linear infinite; 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 4));
+    }
+}
+
+.slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.slide img {
+    width: 100%;
+}

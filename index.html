@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/a912fa542d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- nav bar -->
+    <header>
+        <div class="logo">
+            <img src="./logo.png" alt="">
+            <span>VASCAN SOLUTIONS</span>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav class="nav_items">
+            <ul>
+                <li>
+                    <a href="" >SERVICES</a>
+                </li>
+                <li>
+                    <a href="">MISSION</a>
+                </li>
+                <li>
+                    <a href="">TEAM</a>
+                </li>
+                <li>
+                    <a href="">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <!-- Main section -->
+    <section id ="">
+        <div class="image_container">
+            <img src="./hero1.jpeg" alt="">
+            <div class="overlay-text">MODERINIZE Your Retail Experience</div>
+            <div class="overlay-text2"><p>Enhancing retail chains with advanced tech support for better </p>
+                <p>experiences and revenue growth</p></div>
+            <div class="email-box">
+                <input type="email" placeholder="Enter Email Address">
+               
+            </div>
+            <button class="subscribe-btn">Exrpess Your Interest<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </section>
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+            const images = ['./hero1.jpeg', './hero2.jpeg', './hero3.jpeg','./hero4.jpeg']; // List of image paths
+            let currentIndex = 0;
+            const overlayText = document.querySelector('.overlay-text');
+
+            function changeImage() {
+                const imageElement = document.querySelector('.image_container img');
+                imageElement.src = images[currentIndex];
+                switch (currentIndex) {
+                    case 0:
+                        overlayText.textContent = 'MODERNIZE Your Retail Experience';
+                        break;
+                    case 1:
+                        overlayText.textContent = 'ENHANCE Your Retail Experience';
+                        break;
+                    case 2:
+                        overlayText.textContent = 'REINVENT Your Retail Experience';
+                        break;
+                    case 3:
+                        overlayText.textContent = 'TRANSFORM Your Retail Experience';
+                        break;
+                    default:
+                        overlayText.textContent = 'MODERNIZE Your Retail Experience';
+                }
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            setInterval(changeImage, 3000);
+        });
+    </script>
+    <div class="buttons">
+        <button class="download"><i class="fa-brands fa-android"></i>Download App</button>
+        <button class="shop"><i class="fa-sharp fa-thin fa-shop"></i>Shop Now</button>
+    </div>
+    <!-- Trusties sectiom -->
+     <div id="our_tusties">
+        <p class="Trusties">Our Trusties</p>
+        <div class="slider">
+            <div class="slide-track">
+
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a54/843f/3f0a1804169878b869ba99b2c97bf81f?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=izwcn5BwxyAtUkQmuovthnjQelsSkGBTlHd15Kv-zeQpdcXltz1K8wvjxbCVf0t-mGXGwD6P43VNXQuTjzlqTi2KP217lYxRDcyEpcrt~bKkMHXOQBuGA-GunQKoEbzudc2JQDZkHv1aHexTeO6GtzXXguU5pPEmbc3oIKuCVt3EXSlkUJ~bNC55KSw4~9Rira~zjl3rzx-1e5mZN6Q-asu23oawCJnLKVhEtjUApLP3OJztsPnYN9r60i047nRgv9DRnYAwUa8muDHHk32P3~vpLYyl5juEF29H5jSpRU-8QUzLADIqtrEEVON~EamUrXG4rd6km7S7s814Ckqr0w__" alt="img1">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/ddf0/9236/d579beb90195b2ee5b725b85c6d4db84?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dVt6-X8eTBydYO0dxNJZggJYq3gMiYOotVnVKoRGsZ9B2Gm8Vfr~85qwS6E4E4BTP8xgeRLGZNBnt7xf8kxVzozc5jU6dcyKWatGMRiHbCw~BTqg2qyoHujy1Rs7nAVKm-r8kkNyGt8MUNc6Xl2SNTrUg0PnLg08SEZOzMl8NlusMuKqm7T7p--YDGU96zpWCj0KDQf8xVNdE-8Dt4rYa~yYE2KdGLfuQIVKICgd-9Vy-32g2dFxaCNB2T-arCLcn7UhiwX1SwxiP-JbdaSjl2wpz8vfFSNUALlyKqEbfVM7WvOM5C2BStPqjpq7m-b4t3-33aKE3otSaaSoIafcng__" alt="img2">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/4b58/10eb/5063c6d115c1f29494dcb461f6a69ee0?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=APk7COIMdTLE1sbKb2lqsps4W~WtONy~lcS5EjKUOhzEmMd~upIcCMjdwSf5H3sbQcMSgo~x4xpI4rTkFm~pIhq~BiUPtZgVYgta0Za-LislI1oWYX9-2R7KCUQZy0FVt6GE2zJEFnpSBG89Ewuf5lSxFGTJVNVJi21NgU3ZsJtO9Ji4R~BPZ0z72JEM~qCAvvc83KP6DlMlzKJDNuBdOopPrHm0JmexVOV8KvZO4yT8~pUm5vfToeuBkkliv1-rVFHC3V2rsLJg~482Sn8ttrrXHMN6rxSMzBS-FkWPUVJweB1sFtqvqZYqv4QYMFcsWaAH8m~GwFb1w8eiUeBPIw__" alt="img3">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/2f9f/95e4/dd200fe76b51c637a8830056632721fd?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mBxb130RQb86WNCVwvL1G34oU77XOduGZyjbWKl5Wki15YfgMrEeu6XegQTTXk5tXPo~FqqgfAGc-M2U1imww0Mo6aZZM3njtbXP3T84QtBO5UqxlC2ZvJz8cKMMnrRyMsIXo8ylhICt9UFcuaua3TDfmyQuRL0SiVsFN1G3gozfmhcJuibEurshKndnOTbOCb-Suegb-6hjwmurc0EM3d1qs1DIvJ2TwEbQpcSGV4GXivjuDGJAJM~ozvohYk4Qa5v7Fd2f9fPxX-aDlx3BWGABdvohH4TtJu1b0G-eriBbN3lFmZ-bt9joGLoflP6B2tX4DAixFxGj1IHZFy2MEw__" alt="img4">    
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/5ed0/99b0/3d95de2233a40b264429ccba528f6925?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=is1H~i4lJjh6OmadwcvcGV7cqDePNRxbgdq-Gx~SqTF6EKd1URfol0gvw7RtL03N2garsVcZmbdGKyIzR9VK1fZTnkq6QuXb4BLo1iRCambcPuU7bMQ7kxJkW199BHJwisTqKlppoTsjsQAKr7Rohc~6NXEj-DwIyJSZkpbWVFTeoC8XoM~zbbE1XYJuhMdVYEJpm8xSEPDGC6Uml9mmAJCFsaHMvHQTK8Rp4R6cBRNI7bjDGwjKuuTE11j~PeEzSDevOfxCXEfUTO4SxGZCc55wNA6TsotDsFqFAETFt97B1FtLZHoQhTTdRKhHULPRZkzBPzCJ1Iqpj7FTuEAWsA__" alt="img5">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/f2ba/25ec/ab09e7a3da9958cb4dd8497b645db29d?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZzmMeEcheOME33qVgywzOnYXtADGyNndUYzq9o0YiI4apg6L~205eZyk2r55dsqsmSSzFsp4~m3Z7sAZComHPx6HMHolMzgJtgpXb2Q-7Lo2MOwwM7vyPE2Xy1Jp~Lelb9HN4o6YmVZuTozQTTzkqSKnve6FfxJQusBazyCmwco-S2~mym0gaAyHTjoCk2WsTidbT1kPFA1oZ18yZkb0NGdXGvHUHUKWPwxx6B27v5NBDtHw5r7db4OXzXv-exOovZHbvw7WK-JEDMnyKP3a2g0pJOy6tJ8Lgk26Gb2lHkzw~zqVSUHIT4ihk71F58ywlWLoEjo1f1ZKKp0631GH0g__" alt="img6">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a54/843f/3f0a1804169878b869ba99b2c97bf81f?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=izwcn5BwxyAtUkQmuovthnjQelsSkGBTlHd15Kv-zeQpdcXltz1K8wvjxbCVf0t-mGXGwD6P43VNXQuTjzlqTi2KP217lYxRDcyEpcrt~bKkMHXOQBuGA-GunQKoEbzudc2JQDZkHv1aHexTeO6GtzXXguU5pPEmbc3oIKuCVt3EXSlkUJ~bNC55KSw4~9Rira~zjl3rzx-1e5mZN6Q-asu23oawCJnLKVhEtjUApLP3OJztsPnYN9r60i047nRgv9DRnYAwUa8muDHHk32P3~vpLYyl5juEF29H5jSpRU-8QUzLADIqtrEEVON~EamUrXG4rd6km7S7s814Ckqr0w__" alt="img1">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/ddf0/9236/d579beb90195b2ee5b725b85c6d4db84?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dVt6-X8eTBydYO0dxNJZggJYq3gMiYOotVnVKoRGsZ9B2Gm8Vfr~85qwS6E4E4BTP8xgeRLGZNBnt7xf8kxVzozc5jU6dcyKWatGMRiHbCw~BTqg2qyoHujy1Rs7nAVKm-r8kkNyGt8MUNc6Xl2SNTrUg0PnLg08SEZOzMl8NlusMuKqm7T7p--YDGU96zpWCj0KDQf8xVNdE-8Dt4rYa~yYE2KdGLfuQIVKICgd-9Vy-32g2dFxaCNB2T-arCLcn7UhiwX1SwxiP-JbdaSjl2wpz8vfFSNUALlyKqEbfVM7WvOM5C2BStPqjpq7m-b4t3-33aKE3otSaaSoIafcng__" alt="img2">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/4b58/10eb/5063c6d115c1f29494dcb461f6a69ee0?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=APk7COIMdTLE1sbKb2lqsps4W~WtONy~lcS5EjKUOhzEmMd~upIcCMjdwSf5H3sbQcMSgo~x4xpI4rTkFm~pIhq~BiUPtZgVYgta0Za-LislI1oWYX9-2R7KCUQZy0FVt6GE2zJEFnpSBG89Ewuf5lSxFGTJVNVJi21NgU3ZsJtO9Ji4R~BPZ0z72JEM~qCAvvc83KP6DlMlzKJDNuBdOopPrHm0JmexVOV8KvZO4yT8~pUm5vfToeuBkkliv1-rVFHC3V2rsLJg~482Sn8ttrrXHMN6rxSMzBS-FkWPUVJweB1sFtqvqZYqv4QYMFcsWaAH8m~GwFb1w8eiUeBPIw__" alt="img3">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/2f9f/95e4/dd200fe76b51c637a8830056632721fd?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mBxb130RQb86WNCVwvL1G34oU77XOduGZyjbWKl5Wki15YfgMrEeu6XegQTTXk5tXPo~FqqgfAGc-M2U1imww0Mo6aZZM3njtbXP3T84QtBO5UqxlC2ZvJz8cKMMnrRyMsIXo8ylhICt9UFcuaua3TDfmyQuRL0SiVsFN1G3gozfmhcJuibEurshKndnOTbOCb-Suegb-6hjwmurc0EM3d1qs1DIvJ2TwEbQpcSGV4GXivjuDGJAJM~ozvohYk4Qa5v7Fd2f9fPxX-aDlx3BWGABdvohH4TtJu1b0G-eriBbN3lFmZ-bt9joGLoflP6B2tX4DAixFxGj1IHZFy2MEw__" alt="img4">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/5ed0/99b0/3d95de2233a40b264429ccba528f6925?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=is1H~i4lJjh6OmadwcvcGV7cqDePNRxbgdq-Gx~SqTF6EKd1URfol0gvw7RtL03N2garsVcZmbdGKyIzR9VK1fZTnkq6QuXb4BLo1iRCambcPuU7bMQ7kxJkW199BHJwisTqKlppoTsjsQAKr7Rohc~6NXEj-DwIyJSZkpbWVFTeoC8XoM~zbbE1XYJuhMdVYEJpm8xSEPDGC6Uml9mmAJCFsaHMvHQTK8Rp4R6cBRNI7bjDGwjKuuTE11j~PeEzSDevOfxCXEfUTO4SxGZCc55wNA6TsotDsFqFAETFt97B1FtLZHoQhTTdRKhHULPRZkzBPzCJ1Iqpj7FTuEAWsA__" alt="img5">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/f2ba/25ec/ab09e7a3da9958cb4dd8497b645db29d?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZzmMeEcheOME33qVgywzOnYXtADGyNndUYzq9o0YiI4apg6L~205eZyk2r55dsqsmSSzFsp4~m3Z7sAZComHPx6HMHolMzgJtgpXb2Q-7Lo2MOwwM7vyPE2Xy1Jp~Lelb9HN4o6YmVZuTozQTTzkqSKnve6FfxJQusBazyCmwco-S2~mym0gaAyHTjoCk2WsTidbT1kPFA1oZ18yZkb0NGdXGvHUHUKWPwxx6B27v5NBDtHw5r7db4OXzXv-exOovZHbvw7WK-JEDMnyKP3a2g0pJOy6tJ8Lgk26Gb2lHkzw~zqVSUHIT4ihk71F58ywlWLoEjo1f1ZKKp0631GH0g__" alt="img6">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a54/843f/3f0a1804169878b869ba99b2c97bf81f?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=izwcn5BwxyAtUkQmuovthnjQelsSkGBTlHd15Kv-zeQpdcXltz1K8wvjxbCVf0t-mGXGwD6P43VNXQuTjzlqTi2KP217lYxRDcyEpcrt~bKkMHXOQBuGA-GunQKoEbzudc2JQDZkHv1aHexTeO6GtzXXguU5pPEmbc3oIKuCVt3EXSlkUJ~bNC55KSw4~9Rira~zjl3rzx-1e5mZN6Q-asu23oawCJnLKVhEtjUApLP3OJztsPnYN9r60i047nRgv9DRnYAwUa8muDHHk32P3~vpLYyl5juEF29H5jSpRU-8QUzLADIqtrEEVON~EamUrXG4rd6km7S7s814Ckqr0w__" alt="img1">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/ddf0/9236/d579beb90195b2ee5b725b85c6d4db84?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dVt6-X8eTBydYO0dxNJZggJYq3gMiYOotVnVKoRGsZ9B2Gm8Vfr~85qwS6E4E4BTP8xgeRLGZNBnt7xf8kxVzozc5jU6dcyKWatGMRiHbCw~BTqg2qyoHujy1Rs7nAVKm-r8kkNyGt8MUNc6Xl2SNTrUg0PnLg08SEZOzMl8NlusMuKqm7T7p--YDGU96zpWCj0KDQf8xVNdE-8Dt4rYa~yYE2KdGLfuQIVKICgd-9Vy-32g2dFxaCNB2T-arCLcn7UhiwX1SwxiP-JbdaSjl2wpz8vfFSNUALlyKqEbfVM7WvOM5C2BStPqjpq7m-b4t3-33aKE3otSaaSoIafcng__" alt="img2">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/4b58/10eb/5063c6d115c1f29494dcb461f6a69ee0?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=APk7COIMdTLE1sbKb2lqsps4W~WtONy~lcS5EjKUOhzEmMd~upIcCMjdwSf5H3sbQcMSgo~x4xpI4rTkFm~pIhq~BiUPtZgVYgta0Za-LislI1oWYX9-2R7KCUQZy0FVt6GE2zJEFnpSBG89Ewuf5lSxFGTJVNVJi21NgU3ZsJtO9Ji4R~BPZ0z72JEM~qCAvvc83KP6DlMlzKJDNuBdOopPrHm0JmexVOV8KvZO4yT8~pUm5vfToeuBkkliv1-rVFHC3V2rsLJg~482Sn8ttrrXHMN6rxSMzBS-FkWPUVJweB1sFtqvqZYqv4QYMFcsWaAH8m~GwFb1w8eiUeBPIw__" alt="img3">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/2f9f/95e4/dd200fe76b51c637a8830056632721fd?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mBxb130RQb86WNCVwvL1G34oU77XOduGZyjbWKl5Wki15YfgMrEeu6XegQTTXk5tXPo~FqqgfAGc-M2U1imww0Mo6aZZM3njtbXP3T84QtBO5UqxlC2ZvJz8cKMMnrRyMsIXo8ylhICt9UFcuaua3TDfmyQuRL0SiVsFN1G3gozfmhcJuibEurshKndnOTbOCb-Suegb-6hjwmurc0EM3d1qs1DIvJ2TwEbQpcSGV4GXivjuDGJAJM~ozvohYk4Qa5v7Fd2f9fPxX-aDlx3BWGABdvohH4TtJu1b0G-eriBbN3lFmZ-bt9joGLoflP6B2tX4DAixFxGj1IHZFy2MEw__" alt="img4">    
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/5ed0/99b0/3d95de2233a40b264429ccba528f6925?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=is1H~i4lJjh6OmadwcvcGV7cqDePNRxbgdq-Gx~SqTF6EKd1URfol0gvw7RtL03N2garsVcZmbdGKyIzR9VK1fZTnkq6QuXb4BLo1iRCambcPuU7bMQ7kxJkW199BHJwisTqKlppoTsjsQAKr7Rohc~6NXEj-DwIyJSZkpbWVFTeoC8XoM~zbbE1XYJuhMdVYEJpm8xSEPDGC6Uml9mmAJCFsaHMvHQTK8Rp4R6cBRNI7bjDGwjKuuTE11j~PeEzSDevOfxCXEfUTO4SxGZCc55wNA6TsotDsFqFAETFt97B1FtLZHoQhTTdRKhHULPRZkzBPzCJ1Iqpj7FTuEAWsA__" alt="img5">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/f2ba/25ec/ab09e7a3da9958cb4dd8497b645db29d?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZzmMeEcheOME33qVgywzOnYXtADGyNndUYzq9o0YiI4apg6L~205eZyk2r55dsqsmSSzFsp4~m3Z7sAZComHPx6HMHolMzgJtgpXb2Q-7Lo2MOwwM7vyPE2Xy1Jp~Lelb9HN4o6YmVZuTozQTTzkqSKnve6FfxJQusBazyCmwco-S2~mym0gaAyHTjoCk2WsTidbT1kPFA1oZ18yZkb0NGdXGvHUHUKWPwxx6B27v5NBDtHw5r7db4OXzXv-exOovZHbvw7WK-JEDMnyKP3a2g0pJOy6tJ8Lgk26Gb2lHkzw~zqVSUHIT4ihk71F58ywlWLoEjo1f1ZKKp0631GH0g__" alt="img6">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a54/843f/3f0a1804169878b869ba99b2c97bf81f?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=izwcn5BwxyAtUkQmuovthnjQelsSkGBTlHd15Kv-zeQpdcXltz1K8wvjxbCVf0t-mGXGwD6P43VNXQuTjzlqTi2KP217lYxRDcyEpcrt~bKkMHXOQBuGA-GunQKoEbzudc2JQDZkHv1aHexTeO6GtzXXguU5pPEmbc3oIKuCVt3EXSlkUJ~bNC55KSw4~9Rira~zjl3rzx-1e5mZN6Q-asu23oawCJnLKVhEtjUApLP3OJztsPnYN9r60i047nRgv9DRnYAwUa8muDHHk32P3~vpLYyl5juEF29H5jSpRU-8QUzLADIqtrEEVON~EamUrXG4rd6km7S7s814Ckqr0w__" alt="img1">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/ddf0/9236/d579beb90195b2ee5b725b85c6d4db84?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dVt6-X8eTBydYO0dxNJZggJYq3gMiYOotVnVKoRGsZ9B2Gm8Vfr~85qwS6E4E4BTP8xgeRLGZNBnt7xf8kxVzozc5jU6dcyKWatGMRiHbCw~BTqg2qyoHujy1Rs7nAVKm-r8kkNyGt8MUNc6Xl2SNTrUg0PnLg08SEZOzMl8NlusMuKqm7T7p--YDGU96zpWCj0KDQf8xVNdE-8Dt4rYa~yYE2KdGLfuQIVKICgd-9Vy-32g2dFxaCNB2T-arCLcn7UhiwX1SwxiP-JbdaSjl2wpz8vfFSNUALlyKqEbfVM7WvOM5C2BStPqjpq7m-b4t3-33aKE3otSaaSoIafcng__" alt="img2">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/4b58/10eb/5063c6d115c1f29494dcb461f6a69ee0?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=APk7COIMdTLE1sbKb2lqsps4W~WtONy~lcS5EjKUOhzEmMd~upIcCMjdwSf5H3sbQcMSgo~x4xpI4rTkFm~pIhq~BiUPtZgVYgta0Za-LislI1oWYX9-2R7KCUQZy0FVt6GE2zJEFnpSBG89Ewuf5lSxFGTJVNVJi21NgU3ZsJtO9Ji4R~BPZ0z72JEM~qCAvvc83KP6DlMlzKJDNuBdOopPrHm0JmexVOV8KvZO4yT8~pUm5vfToeuBkkliv1-rVFHC3V2rsLJg~482Sn8ttrrXHMN6rxSMzBS-FkWPUVJweB1sFtqvqZYqv4QYMFcsWaAH8m~GwFb1w8eiUeBPIw__" alt="img3">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/2f9f/95e4/dd200fe76b51c637a8830056632721fd?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mBxb130RQb86WNCVwvL1G34oU77XOduGZyjbWKl5Wki15YfgMrEeu6XegQTTXk5tXPo~FqqgfAGc-M2U1imww0Mo6aZZM3njtbXP3T84QtBO5UqxlC2ZvJz8cKMMnrRyMsIXo8ylhICt9UFcuaua3TDfmyQuRL0SiVsFN1G3gozfmhcJuibEurshKndnOTbOCb-Suegb-6hjwmurc0EM3d1qs1DIvJ2TwEbQpcSGV4GXivjuDGJAJM~ozvohYk4Qa5v7Fd2f9fPxX-aDlx3BWGABdvohH4TtJu1b0G-eriBbN3lFmZ-bt9joGLoflP6B2tX4DAixFxGj1IHZFy2MEw__" alt="img4">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/5ed0/99b0/3d95de2233a40b264429ccba528f6925?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=is1H~i4lJjh6OmadwcvcGV7cqDePNRxbgdq-Gx~SqTF6EKd1URfol0gvw7RtL03N2garsVcZmbdGKyIzR9VK1fZTnkq6QuXb4BLo1iRCambcPuU7bMQ7kxJkW199BHJwisTqKlppoTsjsQAKr7Rohc~6NXEj-DwIyJSZkpbWVFTeoC8XoM~zbbE1XYJuhMdVYEJpm8xSEPDGC6Uml9mmAJCFsaHMvHQTK8Rp4R6cBRNI7bjDGwjKuuTE11j~PeEzSDevOfxCXEfUTO4SxGZCc55wNA6TsotDsFqFAETFt97B1FtLZHoQhTTdRKhHULPRZkzBPzCJ1Iqpj7FTuEAWsA__" alt="img5">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/f2ba/25ec/ab09e7a3da9958cb4dd8497b645db29d?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZzmMeEcheOME33qVgywzOnYXtADGyNndUYzq9o0YiI4apg6L~205eZyk2r55dsqsmSSzFsp4~m3Z7sAZComHPx6HMHolMzgJtgpXb2Q-7Lo2MOwwM7vyPE2Xy1Jp~Lelb9HN4o6YmVZuTozQTTzkqSKnve6FfxJQusBazyCmwco-S2~mym0gaAyHTjoCk2WsTidbT1kPFA1oZ18yZkb0NGdXGvHUHUKWPwxx6B27v5NBDtHw5r7db4OXzXv-exOovZHbvw7WK-JEDMnyKP3a2g0pJOy6tJ8Lgk26Gb2lHkzw~zqVSUHIT4ihk71F58ywlWLoEjo1f1ZKKp0631GH0g__" alt="img6">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
