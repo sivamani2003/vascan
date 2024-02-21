@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/a912fa542d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- nav bar -->
+    <header>
+        <div class="logo">
+            <img src="./logo.png" alt="">
+            <span>VASCAN SOLUTIONS</span>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav class="nav_items">
+            <ul>
+                <li>
+                    <a href="#services" >SERVICES</a>
+                </li>
+                <li>
+                    <a href="#our_mission">MISSION</a>
+                </li>
+                <li>
+                    <a href="#team">TEAM</a>
+                </li>
+                <li>
+                    <a href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <!-- Main section -->
+    <section id="interest-section">
+        <div class="image_container">
+            <img src="./hero1.jpeg" alt="">
+            <div class="overlay-text">MODERNIZE Your Retail Experience</div>
+            <div class="overlay-text2">
+                <p>Enhancing retail chains with advanced tech support for better</p>
+                <p>experiences and revenue growth</p>
+            </div>
+            <div class="email-box">
+                <input type="email" id="email-input" placeholder="Enter Email Address">
+            </div>
+            <button class="subscribe-btn" id="interest-btn">Express Your Interest <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("interest-btn").addEventListener("click", function() {
+                var email = document.getElementById("email-input").value;
+                fetch('https://script.google.com/a/macros/srmap.edu.in/s/AKfycbzy8le7Y1amQ0C7m-VFQ4d-1EOSJ1SqEwtHLflnNAx_y_STcxTgBdEWCMwUhAbYoS5hzg/exec', {
+                method: 'POST',
+                mode: 'no-cors', // Set mode to 'no-cors'
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'email=' + encodeURIComponent(email)
+            })
+            .then(response => {
+                console.log('Request sent successfully:', response);
+            })
+            .catch(error => {
+                console.error('Error sending request:', error);
+            });
+
+            });
+        });
+    </script>
+    
+    
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+            const images = ['./hero1.jpeg', './hero2.jpeg', './hero3.jpeg','./hero4.jpeg']; // List of image paths
+            let currentIndex = 0;
+            const overlayText = document.querySelector('.overlay-text');
+
+            function changeImage() {
+                const imageElement = document.querySelector('.image_container img');
+                imageElement.src = images[currentIndex];
+                switch (currentIndex) {
+                    case 0:
+                        overlayText.textContent = 'MODERNIZE Your Retail Experience';
+                        break;
+                    case 1:
+                        overlayText.textContent = 'ENHANCE Your Retail Experience';
+                        break;
+                    case 2:
+                        overlayText.textContent = 'REINVENT Your Retail Experience';
+                        break;
+                    case 3:
+                        overlayText.textContent = 'TRANSFORM Your Retail Experience';
+                        break;
+                    default:
+                        overlayText.textContent = 'MODERNIZE Your Retail Experience';
+                }
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            setInterval(changeImage, 3000);
+        });
+    </script>
+    <div class="buttons">
+        <button class="download"><i class="fa-brands fa-android"></i>Download App</button>
+        <button class="shop"><i class="fa-sharp fa-thin fa-shop"></i>Shop Now</button>
+    </div>
+    <!-- Trusties sectiom -->
+     <div id="our_tusties">
+        <p class="Trusties">Our Trusties</p>
+        <div class="slider">
+            <div class="slide-track">
+
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a54/843f/3f0a1804169878b869ba99b2c97bf81f?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=izwcn5BwxyAtUkQmuovthnjQelsSkGBTlHd15Kv-zeQpdcXltz1K8wvjxbCVf0t-mGXGwD6P43VNXQuTjzlqTi2KP217lYxRDcyEpcrt~bKkMHXOQBuGA-GunQKoEbzudc2JQDZkHv1aHexTeO6GtzXXguU5pPEmbc3oIKuCVt3EXSlkUJ~bNC55KSw4~9Rira~zjl3rzx-1e5mZN6Q-asu23oawCJnLKVhEtjUApLP3OJztsPnYN9r60i047nRgv9DRnYAwUa8muDHHk32P3~vpLYyl5juEF29H5jSpRU-8QUzLADIqtrEEVON~EamUrXG4rd6km7S7s814Ckqr0w__" alt="img1">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/ddf0/9236/d579beb90195b2ee5b725b85c6d4db84?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dVt6-X8eTBydYO0dxNJZggJYq3gMiYOotVnVKoRGsZ9B2Gm8Vfr~85qwS6E4E4BTP8xgeRLGZNBnt7xf8kxVzozc5jU6dcyKWatGMRiHbCw~BTqg2qyoHujy1Rs7nAVKm-r8kkNyGt8MUNc6Xl2SNTrUg0PnLg08SEZOzMl8NlusMuKqm7T7p--YDGU96zpWCj0KDQf8xVNdE-8Dt4rYa~yYE2KdGLfuQIVKICgd-9Vy-32g2dFxaCNB2T-arCLcn7UhiwX1SwxiP-JbdaSjl2wpz8vfFSNUALlyKqEbfVM7WvOM5C2BStPqjpq7m-b4t3-33aKE3otSaaSoIafcng__" alt="img2">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/4b58/10eb/5063c6d115c1f29494dcb461f6a69ee0?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=APk7COIMdTLE1sbKb2lqsps4W~WtONy~lcS5EjKUOhzEmMd~upIcCMjdwSf5H3sbQcMSgo~x4xpI4rTkFm~pIhq~BiUPtZgVYgta0Za-LislI1oWYX9-2R7KCUQZy0FVt6GE2zJEFnpSBG89Ewuf5lSxFGTJVNVJi21NgU3ZsJtO9Ji4R~BPZ0z72JEM~qCAvvc83KP6DlMlzKJDNuBdOopPrHm0JmexVOV8KvZO4yT8~pUm5vfToeuBkkliv1-rVFHC3V2rsLJg~482Sn8ttrrXHMN6rxSMzBS-FkWPUVJweB1sFtqvqZYqv4QYMFcsWaAH8m~GwFb1w8eiUeBPIw__" alt="img3">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/2f9f/95e4/dd200fe76b51c637a8830056632721fd?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mBxb130RQb86WNCVwvL1G34oU77XOduGZyjbWKl5Wki15YfgMrEeu6XegQTTXk5tXPo~FqqgfAGc-M2U1imww0Mo6aZZM3njtbXP3T84QtBO5UqxlC2ZvJz8cKMMnrRyMsIXo8ylhICt9UFcuaua3TDfmyQuRL0SiVsFN1G3gozfmhcJuibEurshKndnOTbOCb-Suegb-6hjwmurc0EM3d1qs1DIvJ2TwEbQpcSGV4GXivjuDGJAJM~ozvohYk4Qa5v7Fd2f9fPxX-aDlx3BWGABdvohH4TtJu1b0G-eriBbN3lFmZ-bt9joGLoflP6B2tX4DAixFxGj1IHZFy2MEw__" alt="img4">    
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/5ed0/99b0/3d95de2233a40b264429ccba528f6925?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=is1H~i4lJjh6OmadwcvcGV7cqDePNRxbgdq-Gx~SqTF6EKd1URfol0gvw7RtL03N2garsVcZmbdGKyIzR9VK1fZTnkq6QuXb4BLo1iRCambcPuU7bMQ7kxJkW199BHJwisTqKlppoTsjsQAKr7Rohc~6NXEj-DwIyJSZkpbWVFTeoC8XoM~zbbE1XYJuhMdVYEJpm8xSEPDGC6Uml9mmAJCFsaHMvHQTK8Rp4R6cBRNI7bjDGwjKuuTE11j~PeEzSDevOfxCXEfUTO4SxGZCc55wNA6TsotDsFqFAETFt97B1FtLZHoQhTTdRKhHULPRZkzBPzCJ1Iqpj7FTuEAWsA__" alt="img5">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/f2ba/25ec/ab09e7a3da9958cb4dd8497b645db29d?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZzmMeEcheOME33qVgywzOnYXtADGyNndUYzq9o0YiI4apg6L~205eZyk2r55dsqsmSSzFsp4~m3Z7sAZComHPx6HMHolMzgJtgpXb2Q-7Lo2MOwwM7vyPE2Xy1Jp~Lelb9HN4o6YmVZuTozQTTzkqSKnve6FfxJQusBazyCmwco-S2~mym0gaAyHTjoCk2WsTidbT1kPFA1oZ18yZkb0NGdXGvHUHUKWPwxx6B27v5NBDtHw5r7db4OXzXv-exOovZHbvw7WK-JEDMnyKP3a2g0pJOy6tJ8Lgk26Gb2lHkzw~zqVSUHIT4ihk71F58ywlWLoEjo1f1ZKKp0631GH0g__" alt="img6">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a54/843f/3f0a1804169878b869ba99b2c97bf81f?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=izwcn5BwxyAtUkQmuovthnjQelsSkGBTlHd15Kv-zeQpdcXltz1K8wvjxbCVf0t-mGXGwD6P43VNXQuTjzlqTi2KP217lYxRDcyEpcrt~bKkMHXOQBuGA-GunQKoEbzudc2JQDZkHv1aHexTeO6GtzXXguU5pPEmbc3oIKuCVt3EXSlkUJ~bNC55KSw4~9Rira~zjl3rzx-1e5mZN6Q-asu23oawCJnLKVhEtjUApLP3OJztsPnYN9r60i047nRgv9DRnYAwUa8muDHHk32P3~vpLYyl5juEF29H5jSpRU-8QUzLADIqtrEEVON~EamUrXG4rd6km7S7s814Ckqr0w__" alt="img1">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/ddf0/9236/d579beb90195b2ee5b725b85c6d4db84?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dVt6-X8eTBydYO0dxNJZggJYq3gMiYOotVnVKoRGsZ9B2Gm8Vfr~85qwS6E4E4BTP8xgeRLGZNBnt7xf8kxVzozc5jU6dcyKWatGMRiHbCw~BTqg2qyoHujy1Rs7nAVKm-r8kkNyGt8MUNc6Xl2SNTrUg0PnLg08SEZOzMl8NlusMuKqm7T7p--YDGU96zpWCj0KDQf8xVNdE-8Dt4rYa~yYE2KdGLfuQIVKICgd-9Vy-32g2dFxaCNB2T-arCLcn7UhiwX1SwxiP-JbdaSjl2wpz8vfFSNUALlyKqEbfVM7WvOM5C2BStPqjpq7m-b4t3-33aKE3otSaaSoIafcng__" alt="img2">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/4b58/10eb/5063c6d115c1f29494dcb461f6a69ee0?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=APk7COIMdTLE1sbKb2lqsps4W~WtONy~lcS5EjKUOhzEmMd~upIcCMjdwSf5H3sbQcMSgo~x4xpI4rTkFm~pIhq~BiUPtZgVYgta0Za-LislI1oWYX9-2R7KCUQZy0FVt6GE2zJEFnpSBG89Ewuf5lSxFGTJVNVJi21NgU3ZsJtO9Ji4R~BPZ0z72JEM~qCAvvc83KP6DlMlzKJDNuBdOopPrHm0JmexVOV8KvZO4yT8~pUm5vfToeuBkkliv1-rVFHC3V2rsLJg~482Sn8ttrrXHMN6rxSMzBS-FkWPUVJweB1sFtqvqZYqv4QYMFcsWaAH8m~GwFb1w8eiUeBPIw__" alt="img3">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/2f9f/95e4/dd200fe76b51c637a8830056632721fd?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mBxb130RQb86WNCVwvL1G34oU77XOduGZyjbWKl5Wki15YfgMrEeu6XegQTTXk5tXPo~FqqgfAGc-M2U1imww0Mo6aZZM3njtbXP3T84QtBO5UqxlC2ZvJz8cKMMnrRyMsIXo8ylhICt9UFcuaua3TDfmyQuRL0SiVsFN1G3gozfmhcJuibEurshKndnOTbOCb-Suegb-6hjwmurc0EM3d1qs1DIvJ2TwEbQpcSGV4GXivjuDGJAJM~ozvohYk4Qa5v7Fd2f9fPxX-aDlx3BWGABdvohH4TtJu1b0G-eriBbN3lFmZ-bt9joGLoflP6B2tX4DAixFxGj1IHZFy2MEw__" alt="img4">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/5ed0/99b0/3d95de2233a40b264429ccba528f6925?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=is1H~i4lJjh6OmadwcvcGV7cqDePNRxbgdq-Gx~SqTF6EKd1URfol0gvw7RtL03N2garsVcZmbdGKyIzR9VK1fZTnkq6QuXb4BLo1iRCambcPuU7bMQ7kxJkW199BHJwisTqKlppoTsjsQAKr7Rohc~6NXEj-DwIyJSZkpbWVFTeoC8XoM~zbbE1XYJuhMdVYEJpm8xSEPDGC6Uml9mmAJCFsaHMvHQTK8Rp4R6cBRNI7bjDGwjKuuTE11j~PeEzSDevOfxCXEfUTO4SxGZCc55wNA6TsotDsFqFAETFt97B1FtLZHoQhTTdRKhHULPRZkzBPzCJ1Iqpj7FTuEAWsA__" alt="img5">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/f2ba/25ec/ab09e7a3da9958cb4dd8497b645db29d?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZzmMeEcheOME33qVgywzOnYXtADGyNndUYzq9o0YiI4apg6L~205eZyk2r55dsqsmSSzFsp4~m3Z7sAZComHPx6HMHolMzgJtgpXb2Q-7Lo2MOwwM7vyPE2Xy1Jp~Lelb9HN4o6YmVZuTozQTTzkqSKnve6FfxJQusBazyCmwco-S2~mym0gaAyHTjoCk2WsTidbT1kPFA1oZ18yZkb0NGdXGvHUHUKWPwxx6B27v5NBDtHw5r7db4OXzXv-exOovZHbvw7WK-JEDMnyKP3a2g0pJOy6tJ8Lgk26Gb2lHkzw~zqVSUHIT4ihk71F58ywlWLoEjo1f1ZKKp0631GH0g__" alt="img6">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a54/843f/3f0a1804169878b869ba99b2c97bf81f?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=izwcn5BwxyAtUkQmuovthnjQelsSkGBTlHd15Kv-zeQpdcXltz1K8wvjxbCVf0t-mGXGwD6P43VNXQuTjzlqTi2KP217lYxRDcyEpcrt~bKkMHXOQBuGA-GunQKoEbzudc2JQDZkHv1aHexTeO6GtzXXguU5pPEmbc3oIKuCVt3EXSlkUJ~bNC55KSw4~9Rira~zjl3rzx-1e5mZN6Q-asu23oawCJnLKVhEtjUApLP3OJztsPnYN9r60i047nRgv9DRnYAwUa8muDHHk32P3~vpLYyl5juEF29H5jSpRU-8QUzLADIqtrEEVON~EamUrXG4rd6km7S7s814Ckqr0w__" alt="img1">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/ddf0/9236/d579beb90195b2ee5b725b85c6d4db84?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dVt6-X8eTBydYO0dxNJZggJYq3gMiYOotVnVKoRGsZ9B2Gm8Vfr~85qwS6E4E4BTP8xgeRLGZNBnt7xf8kxVzozc5jU6dcyKWatGMRiHbCw~BTqg2qyoHujy1Rs7nAVKm-r8kkNyGt8MUNc6Xl2SNTrUg0PnLg08SEZOzMl8NlusMuKqm7T7p--YDGU96zpWCj0KDQf8xVNdE-8Dt4rYa~yYE2KdGLfuQIVKICgd-9Vy-32g2dFxaCNB2T-arCLcn7UhiwX1SwxiP-JbdaSjl2wpz8vfFSNUALlyKqEbfVM7WvOM5C2BStPqjpq7m-b4t3-33aKE3otSaaSoIafcng__" alt="img2">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/4b58/10eb/5063c6d115c1f29494dcb461f6a69ee0?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=APk7COIMdTLE1sbKb2lqsps4W~WtONy~lcS5EjKUOhzEmMd~upIcCMjdwSf5H3sbQcMSgo~x4xpI4rTkFm~pIhq~BiUPtZgVYgta0Za-LislI1oWYX9-2R7KCUQZy0FVt6GE2zJEFnpSBG89Ewuf5lSxFGTJVNVJi21NgU3ZsJtO9Ji4R~BPZ0z72JEM~qCAvvc83KP6DlMlzKJDNuBdOopPrHm0JmexVOV8KvZO4yT8~pUm5vfToeuBkkliv1-rVFHC3V2rsLJg~482Sn8ttrrXHMN6rxSMzBS-FkWPUVJweB1sFtqvqZYqv4QYMFcsWaAH8m~GwFb1w8eiUeBPIw__" alt="img3">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/2f9f/95e4/dd200fe76b51c637a8830056632721fd?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mBxb130RQb86WNCVwvL1G34oU77XOduGZyjbWKl5Wki15YfgMrEeu6XegQTTXk5tXPo~FqqgfAGc-M2U1imww0Mo6aZZM3njtbXP3T84QtBO5UqxlC2ZvJz8cKMMnrRyMsIXo8ylhICt9UFcuaua3TDfmyQuRL0SiVsFN1G3gozfmhcJuibEurshKndnOTbOCb-Suegb-6hjwmurc0EM3d1qs1DIvJ2TwEbQpcSGV4GXivjuDGJAJM~ozvohYk4Qa5v7Fd2f9fPxX-aDlx3BWGABdvohH4TtJu1b0G-eriBbN3lFmZ-bt9joGLoflP6B2tX4DAixFxGj1IHZFy2MEw__" alt="img4">    
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/5ed0/99b0/3d95de2233a40b264429ccba528f6925?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=is1H~i4lJjh6OmadwcvcGV7cqDePNRxbgdq-Gx~SqTF6EKd1URfol0gvw7RtL03N2garsVcZmbdGKyIzR9VK1fZTnkq6QuXb4BLo1iRCambcPuU7bMQ7kxJkW199BHJwisTqKlppoTsjsQAKr7Rohc~6NXEj-DwIyJSZkpbWVFTeoC8XoM~zbbE1XYJuhMdVYEJpm8xSEPDGC6Uml9mmAJCFsaHMvHQTK8Rp4R6cBRNI7bjDGwjKuuTE11j~PeEzSDevOfxCXEfUTO4SxGZCc55wNA6TsotDsFqFAETFt97B1FtLZHoQhTTdRKhHULPRZkzBPzCJ1Iqpj7FTuEAWsA__" alt="img5">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/f2ba/25ec/ab09e7a3da9958cb4dd8497b645db29d?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZzmMeEcheOME33qVgywzOnYXtADGyNndUYzq9o0YiI4apg6L~205eZyk2r55dsqsmSSzFsp4~m3Z7sAZComHPx6HMHolMzgJtgpXb2Q-7Lo2MOwwM7vyPE2Xy1Jp~Lelb9HN4o6YmVZuTozQTTzkqSKnve6FfxJQusBazyCmwco-S2~mym0gaAyHTjoCk2WsTidbT1kPFA1oZ18yZkb0NGdXGvHUHUKWPwxx6B27v5NBDtHw5r7db4OXzXv-exOovZHbvw7WK-JEDMnyKP3a2g0pJOy6tJ8Lgk26Gb2lHkzw~zqVSUHIT4ihk71F58ywlWLoEjo1f1ZKKp0631GH0g__" alt="img6">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a54/843f/3f0a1804169878b869ba99b2c97bf81f?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=izwcn5BwxyAtUkQmuovthnjQelsSkGBTlHd15Kv-zeQpdcXltz1K8wvjxbCVf0t-mGXGwD6P43VNXQuTjzlqTi2KP217lYxRDcyEpcrt~bKkMHXOQBuGA-GunQKoEbzudc2JQDZkHv1aHexTeO6GtzXXguU5pPEmbc3oIKuCVt3EXSlkUJ~bNC55KSw4~9Rira~zjl3rzx-1e5mZN6Q-asu23oawCJnLKVhEtjUApLP3OJztsPnYN9r60i047nRgv9DRnYAwUa8muDHHk32P3~vpLYyl5juEF29H5jSpRU-8QUzLADIqtrEEVON~EamUrXG4rd6km7S7s814Ckqr0w__" alt="img1">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/ddf0/9236/d579beb90195b2ee5b725b85c6d4db84?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dVt6-X8eTBydYO0dxNJZggJYq3gMiYOotVnVKoRGsZ9B2Gm8Vfr~85qwS6E4E4BTP8xgeRLGZNBnt7xf8kxVzozc5jU6dcyKWatGMRiHbCw~BTqg2qyoHujy1Rs7nAVKm-r8kkNyGt8MUNc6Xl2SNTrUg0PnLg08SEZOzMl8NlusMuKqm7T7p--YDGU96zpWCj0KDQf8xVNdE-8Dt4rYa~yYE2KdGLfuQIVKICgd-9Vy-32g2dFxaCNB2T-arCLcn7UhiwX1SwxiP-JbdaSjl2wpz8vfFSNUALlyKqEbfVM7WvOM5C2BStPqjpq7m-b4t3-33aKE3otSaaSoIafcng__" alt="img2">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/4b58/10eb/5063c6d115c1f29494dcb461f6a69ee0?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=APk7COIMdTLE1sbKb2lqsps4W~WtONy~lcS5EjKUOhzEmMd~upIcCMjdwSf5H3sbQcMSgo~x4xpI4rTkFm~pIhq~BiUPtZgVYgta0Za-LislI1oWYX9-2R7KCUQZy0FVt6GE2zJEFnpSBG89Ewuf5lSxFGTJVNVJi21NgU3ZsJtO9Ji4R~BPZ0z72JEM~qCAvvc83KP6DlMlzKJDNuBdOopPrHm0JmexVOV8KvZO4yT8~pUm5vfToeuBkkliv1-rVFHC3V2rsLJg~482Sn8ttrrXHMN6rxSMzBS-FkWPUVJweB1sFtqvqZYqv4QYMFcsWaAH8m~GwFb1w8eiUeBPIw__" alt="img3">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/2f9f/95e4/dd200fe76b51c637a8830056632721fd?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mBxb130RQb86WNCVwvL1G34oU77XOduGZyjbWKl5Wki15YfgMrEeu6XegQTTXk5tXPo~FqqgfAGc-M2U1imww0Mo6aZZM3njtbXP3T84QtBO5UqxlC2ZvJz8cKMMnrRyMsIXo8ylhICt9UFcuaua3TDfmyQuRL0SiVsFN1G3gozfmhcJuibEurshKndnOTbOCb-Suegb-6hjwmurc0EM3d1qs1DIvJ2TwEbQpcSGV4GXivjuDGJAJM~ozvohYk4Qa5v7Fd2f9fPxX-aDlx3BWGABdvohH4TtJu1b0G-eriBbN3lFmZ-bt9joGLoflP6B2tX4DAixFxGj1IHZFy2MEw__" alt="img4">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/5ed0/99b0/3d95de2233a40b264429ccba528f6925?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=is1H~i4lJjh6OmadwcvcGV7cqDePNRxbgdq-Gx~SqTF6EKd1URfol0gvw7RtL03N2garsVcZmbdGKyIzR9VK1fZTnkq6QuXb4BLo1iRCambcPuU7bMQ7kxJkW199BHJwisTqKlppoTsjsQAKr7Rohc~6NXEj-DwIyJSZkpbWVFTeoC8XoM~zbbE1XYJuhMdVYEJpm8xSEPDGC6Uml9mmAJCFsaHMvHQTK8Rp4R6cBRNI7bjDGwjKuuTE11j~PeEzSDevOfxCXEfUTO4SxGZCc55wNA6TsotDsFqFAETFt97B1FtLZHoQhTTdRKhHULPRZkzBPzCJ1Iqpj7FTuEAWsA__" alt="img5">
+                </div>
+                <div class="slide">
+                    <img src="https://s3-alpha-sig.figma.com/img/f2ba/25ec/ab09e7a3da9958cb4dd8497b645db29d?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZzmMeEcheOME33qVgywzOnYXtADGyNndUYzq9o0YiI4apg6L~205eZyk2r55dsqsmSSzFsp4~m3Z7sAZComHPx6HMHolMzgJtgpXb2Q-7Lo2MOwwM7vyPE2Xy1Jp~Lelb9HN4o6YmVZuTozQTTzkqSKnve6FfxJQusBazyCmwco-S2~mym0gaAyHTjoCk2WsTidbT1kPFA1oZ18yZkb0NGdXGvHUHUKWPwxx6B27v5NBDtHw5r7db4OXzXv-exOovZHbvw7WK-JEDMnyKP3a2g0pJOy6tJ8Lgk26Gb2lHkzw~zqVSUHIT4ihk71F58ywlWLoEjo1f1ZKKp0631GH0g__" alt="img6">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services -->
+    <div id="services">
+        <img src="./svgviewer-output.png" alt="">
+        <div class="container1">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <img src="./img1.jpeg" alt="Faster Checkout" width="936" height="623">
+                    <h3>Faster Checkout</h3>
+                    <p>Streamline checkout for faster service and happier customers.</p>
+                </div>
+                <div class="service">
+                    <img src="./img2.jpeg" alt="Smart Find" width="936" height="623">
+                    <h3>Smart Find</h3>
+                    <p>Effortless shopping experience, locating products with ease.</p>
+                </div>
+                <div class="service">
+                    <img src="./img3.jpeg" alt="Product Discovery" width="936" height="623">
+                    <h3>Product Discovery</h3>
+                    <p>Use tech to improve product discovery, boost sales, satisfaction.</p>
+                </div>
+            </div>
+        </div>    
+    </div> 
+    <div class="problem">
+        <p class="problem_title">The Problems</p>
+        <img class="svg" src="svgviewer-output.png" alt="">
+        <div class="problem_info">
+            <div class="problem_info_1">
+                <img src="https://s3-alpha-sig.figma.com/img/c50b/4a63/4d4820b432a83de7b5302c9bb5d30488?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mOhvB~VcA6UYZp3hDRSDmmOk9lE8k2t4whVm0omCklI7EgbDqfoc7hz-iB4r0alnzHowVbJFesOpqT-DP4sl6JPweSY-3gUorRiCQf6MDTAjUdJs1B1nT9SRd42Fdu7vOhS91e3rXVnoz-O0lllYCesrv3xaLwBw93m~gFr2rWfP7XguSzMzc5CEnNIyQSwqQ-8brGmY0Jh0dLdKiYniJMY50xjuaznQISnnMeEXhuFrMC-PmNe5sZoeNYfYqPj1OTwcE~kMBCr-32tL~dy3~QDrWRlQB2dgQ0YYCuHgAWyweU0Vy6xKJpJNwKqYQa5rF~3Ojsd~T0u~QJoq6X8~7Q__">
+                <h1>"Revolutionizing Retail Personalized Shopping Redefined"</h1>
+                <p>Our platform addresses retail challenges with seamless product discovery, rapid in-store location, and faster checkout. By prioritizing convenience and personalization, we reshape the retail experience for customers.</p>
+            </div>
+            <div class="line"></div> 
+            <div class="problem_info_2">
+                <img src="https://s3-alpha-sig.figma.com/img/ed36/04b2/11c9c91340998387874f389c4d39594b?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W4oWHRaec6E-MeubaeNwL-3s6lfbadzYU6kqRltEUq4u8JHmTkA3DDbIG6~ZXj95AQTlz1Dz-tryw02l~2~C1Xktv-hcantvCEB1M04Mua7dkK7TwufexZXYH7Cn0fzqZtJ~80RnWk7Oq--cSvGExEcz1wY6AMSYq~obO-0d9KtOFV6AOAtLyRpS7xHsNZpkx0~ljLVMoEUBCvPTuP3vPfau0JdAfaBjJWxM8BkVcz6-9sGGgKQaWveh30e-hNL~T8VW3cCP5bWbdLzS03De70SSkuKcf3ZZdOw7M3c5CQMh6QAwDzBKl5ZOyzzZDBPdJMIKY1aOM3HYV85EP0h9wQ__">
+                <h1>"Data-Driven Retail: Empowering Insights for Targeted Success"</h1>
+                <p>Our platform delivers valuable customer insights to retailers, empowering informed decisions and targeted marketing. Bridging the gap between customers and retailers, we drive efficiency, personalization, and business growth in retail.</p>
+            </div>
+        </div>
+       </div > 
+     <!-- OUR Mission -->
+    <div id="our_mission" class="mission">
+        <img class="svg2" src="svgviewer-output.png" alt=""> 
+        <div class="mission_container">
+            <p class="mission_title">OUR MISSION</p>
+        </div>
+        <div class="mission_items">
+            <img src="image_8-removebg-preview.png" alt="">
+            <p>At Vascan Solutions, we specialize in elevating retail chains' revenue and customer experience through innovative technology like Product Discovery, Smart Find, and Faster Checkout. Our focus is on efficiency, sales growth, and building lasting client relationships.</p>
+        </div>
+
+</div>
+<!-- Team -->
+<div id="team" class="team">
+<h1>Our Team</h1>
+<p class="team_txt"> The Masterminds Driving Our Enterprise Software Startup</p>
+<div class="card-conatiner">
+    <div class="card">
+        <img src="https://s3-alpha-sig.figma.com/img/99a3/97cd/d4be422be0ee1d8fe2abae6bcb602469?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EtOfjl7GNfb6J-RMoUOmTzhs111WmTkYKCSiVadHJFQuatemXJXfbVEmOdMU1Foht3YY3myByMqEARtcb58d~z27n0Vn-P25KMH3tcg9XrKT6AdcjvlkVR1SvbGYLQvJQZXlcKPv4w4ALlYIA2Pt4niG3Gpir0CwiqHPWf4gJLQtThberDkaxEpkZmnqvJvDM-3XIi5QV80r6OhSD5x-uGy7VHTOUX8P8EgIyORGmD1ssCXE83fJqJyB8BJiCtEuFIYZzCtRlb6focTClw8ER19WL1XNVCWATcXVS~Z8rszoBHyTIWQFu~YlwrX5~1jUu4c8pyYf2yVw8ta6afysqg__" alt="">
+        <div class="card-content">
+            <span>Sai Tharun Nelluru</span>
+            <p>Founder of Vascan Solutions</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://s3-alpha-sig.figma.com/img/ad57/6b62/df14c7ec0ff35926e535c89ec5ae7f32?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YtBa4c~TRlVYzGCYBvR6iIOUlexJTACevxwzhCK7uCxWr5IcSwNrW1sZdKufYE5SXMfwRPPUNSdY8kcPnMqj~2PLPIl4h17D5FhNtnF51IlcU89UqLEfLffqSeMehh~Cqpa4EoVkZZMj-4bcv5S3h6LSiJlI0hCNp1c4P1LJ1tu5Qjv3EF7kdvLgBWtO2ueEaY1Uvl~QTjTxpQe9ieO5nrLqLBF9ShvvdooUu7jEafio3SVwnCyXs6mYKkIsITs69uScvwCAO-UV0--aOBUTvkCEUsiMf6nsrXYj5StYRTudlXiK5TA3fd3N4qeiyFoEGYdJ22Xgr7apJAyWXoM-og__" alt="">
+        <div class="card-content">
+            <span>Sai Tharun Nelluru</span>
+            <p>Founder of Vascan Solutions</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://s3-alpha-sig.figma.com/img/ad57/6b62/df14c7ec0ff35926e535c89ec5ae7f32?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YtBa4c~TRlVYzGCYBvR6iIOUlexJTACevxwzhCK7uCxWr5IcSwNrW1sZdKufYE5SXMfwRPPUNSdY8kcPnMqj~2PLPIl4h17D5FhNtnF51IlcU89UqLEfLffqSeMehh~Cqpa4EoVkZZMj-4bcv5S3h6LSiJlI0hCNp1c4P1LJ1tu5Qjv3EF7kdvLgBWtO2ueEaY1Uvl~QTjTxpQe9ieO5nrLqLBF9ShvvdooUu7jEafio3SVwnCyXs6mYKkIsITs69uScvwCAO-UV0--aOBUTvkCEUsiMf6nsrXYj5StYRTudlXiK5TA3fd3N4qeiyFoEGYdJ22Xgr7apJAyWXoM-og__" alt="">
+        <div class="card-content">
+            <span>Sai Tharun Nelluru</span>
+            <p>Founder of Vascan Solutions</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://s3-alpha-sig.figma.com/img/9ba4/4576/3de78df4c739fa68a79ba8016def9495?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Af8vE0eWOXaBB2dKonGlOED3YDYVw3Sw11eYxeqH3ljR0KijpIz5oHqPywZIFEG0Dk~hsr4NyUf1R9RAa7F~0Bn8ZQyjQclIo8IYO-mtvSdLQskeGjaPUpxom79hROJAjH4dlVn1owwyGVghE-SFGOAgVm4J4qdir9z2zmVzIggPNdo3pudP~Zfkgj~cZWmVCI6LvBvXooCr~IAIe-OV1p7KfdU9is5jOzxXGqUub0~d4bSb67RZ0y7iWi1ytYB4CE4Zk-93EPkjk2ayOWVU5F7lyiE7Y-JXPrFIcxJc1nL8Sbmumj6J4STugN0Oog2xxL84LFmvXaa4pBnKIwHz2A__" alt="">
+        <div class="card-content">
+            <span>Sai Tharun Nelluru</span>
+            <p>Founder of Vascan Solutions</p>
+        </div>
+    </div>
+</div>
+<p class="team_last">See all achievements by our team <i class="fa-solid fa-arrow-up"></i></p>
+</div>
+<!-- contact -->
+<div id="contact" class="contact">
+    <img src="svgviewer-output.png" alt=""><span> Contact Us</span>
+</div>
+<div class="map">
+    <p><iframe class="van" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.20952390216!2d80.50574867533079!3d16.46492502872293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f253b87d44b3%3A0x591c2967f32abc19!2sSRM%20University%20AP!5e0!3m2!1sen!2sin!4v1708249252273!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+</div>
+<div class="above_footer">
+    <div class="above_footer_cont">
+        <img src="https://s3-alpha-sig.figma.com/img/254a/e058/381130422bb327a692e9f764628b5f3c?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ciQN7L386WGKIp4xPCPVT2iNFC~--ePs~4ATy8hbz-UV8sN8GN-lWL9Mjs0JgulhNhIFe324FAkYLouTd~4ilFf-g4cTlTdIlB3adksj6a2QJicAEiY83nnOafYSI1w1MXqdMpthLpWg0Je1U6DgjGMp7cNRyMzkF17TMwc-Vrjz86xvl3c4BHQC7drEnRuvQarmmMmC9o1hgkVhySxujS8Y6Gh44IuYXTdcDAlwQN0b3R13aF-3tJiBCEA69oVPabTAjvGmVazdDh84riZQuiYJxpH6MWWKIzqUSbrfA3isNz8z05I6pS2~ZW~GLZic-U5N4n3kjmMC4XZxGRGeeA__">
+        <p class="one">VASCAN SOLUTIONS</p>
+        <p class="two">Subscribe to our newsletter</p>
+        <div class="above_footer_mail">
+            <input type="text" placeholder="First Name">
+            <input type="email" placeholder="Email">
+            <div class="subscribe">
+                <p>Subscribe Now</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="links">
+    <div class="links-cont">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <div class="design2"></div>
+    </div>
+    <img src="svgviewer-output.png" alt="">
+    <div class="copyright">
+        <p>Copyright © 2024 VASCAN SOLUTIONS PVT LTD - All Rights Reserved.</p>
+    </div>
+</div>
+
+</body>
+</html>
